@@ -34,7 +34,11 @@ jobs:
         run: |
           ls -l
           pwd
-      - name: John is KIng
+        
+      - name: start nginx
+        id: nginx
+        uses: nyurik/action-setup-nginx@v1
+      - name:
         run: |
           echo "Hello, world!" > "${{ steps.nginx.outputs.html-dir }}/index.html"
       
